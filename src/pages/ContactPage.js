@@ -3,6 +3,8 @@ import contactService from '../services/ContactService.js';
 import ContactList from '../components/ContactList.js';
 import ContactFilter from '../components/ContactFilter.js';
 
+// need to make the details cmp appear here with function been sent to the list and then to preview
+
 class ContactPage extends Component {
   state = { contacts: [], fiter: '' };
 

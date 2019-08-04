@@ -10,16 +10,15 @@ class HomePage extends Component {
     const loggedUser = UserService.getUser();
     this.setState({ BitCoinRate });
     this.setState({ loggedUser });
-    console.log(this.state.loggedUser);
   }
 
   render() {
     return (
-      <div className="layout column">
+      <div className="full column white center">
         <h1>Hello {this.state.loggedUser.name}! </h1>
         <ul className="clear-list">
-          <li>Coins: {this.state.loggedUser.coins} </li>
-          <li>BTC: {this.state.BitCoinRate} </li>
+          <li>Coins: 💰{this.state.loggedUser.coins} </li>
+          <li>BTC: ₿{this.state.BitCoinRate} </li>
         </ul>
       </div>
     );
