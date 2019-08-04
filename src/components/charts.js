@@ -6,9 +6,11 @@ import { Sparklines, SparklinesLine } from 'react-sparklines';
 class ContactFilter extends Component {
   state = { confirmedTransChartData: [], marktPriceChartData: [] };
 
+  //Should be promise all/2 diffrent functions
   async componentDidMount() {
     const marketPriceData = await BitCoinService.getMarketPrice();
     const confirmedTransData = await BitCoinService.getConfirmedTrans();
+    console.log(marketPriceData, confirmedTransData);
     let marktPriceChartData = [];
     let confirmedTransChartData = [];
     for (let i = 0; i < 100; i++) {
@@ -16,13 +18,11 @@ class ContactFilter extends Component {
       confirmedTransChartData.push(confirmedTransData.values[i].y);
     }
     this.setState({ marktPriceChartData, confirmedTransChartData });
-    // this.setState({ confirmedTransChartData });
-    console.log(this.state);
   }
 
   render() {
     return (
-      <div className="flex column center layout">
+      <div className="flex column layout white">
         <h1>Market Price (USD)</h1>
         <Sparklines
           data={this.state.marktPriceChartData}

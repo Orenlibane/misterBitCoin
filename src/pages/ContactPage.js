@@ -15,6 +15,7 @@ class ContactPage extends Component {
 
   onFilter = async event => {
     const filterBy = event.target.value;
+    this.setState({ filter: filterBy });
     const contacts = await contactService.getContacts({ term: filterBy });
     this.setState({ contacts });
   };

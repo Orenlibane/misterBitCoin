@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 class ContactPreview extends Component {
+  selectContact = () => {
+    this.props.onChooseUser(this.props.user._id);
+  };
+
   render() {
     return (
-      <li
-        onClick={() => {
-          this.props.onChooseUser(this.props.user._id);
-        }}
-      >
-        <div class="user-buttons">
+      <li onClick={this.selectContact}>
+        <div className="user-buttons">
           <button>✎</button>
           <button>🗑️</button>
         </div>
