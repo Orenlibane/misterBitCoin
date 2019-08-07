@@ -1,7 +1,8 @@
 .userList li {
   border: 2px black solid;
   width: 200px;
-  padding: 20px;
+  padding: 0 20px;
+  min-height: 150px;
   list-style: none;
   text-align: center;
   border-radius: 20px;
@@ -48,6 +49,12 @@
   align-items: center;
 }
 
+.nav-bar {
+  background: rgb(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+}
+
 .filter-input {
   border-radius: 5px;
   padding: 7px;
@@ -87,6 +94,17 @@
   list-style: none;
 }
 
+.space-around {
+  justify-content: space-around
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: black;
+}
+
 .layout {
   display: flex;
   justify-content: center;
@@ -101,8 +119,8 @@
 }
 
 .avatar-img {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
 }
 
 .white {
